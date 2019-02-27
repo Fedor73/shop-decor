@@ -1,0 +1,13 @@
+{
+    "name": "my-awesome-package",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "^3.3.1",
+        "normalize-css": "^2.3.1",
+        "jquery-validation": "^1.17.0"
+    },
+    "devDependencies": {
+        "slick-carousel": "^1.8.1"
+    }
+}

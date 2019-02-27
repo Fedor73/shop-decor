@@ -1,0 +1,32 @@
+//- ====================
+//- Project: footer_main
+//- 00-00-2017: Author
+//- --------------------
+//- Футер страниц
+//- ===================
+mixin footer()
+    +b('footer').wrap-foot
+        .b-container
+            +b.footer
+                +e('p').text Все права защищены ©
+            
+                +e.middle-block
+                    +e('ul').list
+                        +e('li').item
+                            a(href="").link Новости 
+
+                        +e('li').item
+                            a(href="").link Акции
+                        +e('li').item
+                            a(href="").link Оплата и доставка
+                        +e('li').item
+                            a(href="").link Контакты
+
+                +e.right-block
+                    +e('a')(href="").link
+                        +e('span').question ?
+                        +e('span').text-right Задать вопрос
+                    
+                    +e('a')(href="tel:+78002341900").phone
+                        +e('img')(src='images/phone-foot.png').phone-img.js-image-wrapper
+                        span 8 800 234 19 00

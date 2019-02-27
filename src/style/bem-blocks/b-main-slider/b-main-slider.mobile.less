@@ -1,0 +1,125 @@
+.b-main-slider {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    position: relative;
+    margin-bottom: 38px;
+    overflow: hidden;
+    
+    &__item-sl {
+        display: inline-block;
+        height: 437px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        font-family: 'object-fit: cover';
+    }
+
+    &__wrap-title {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 604px;
+        height: 220px;
+        border-top: 5px solid #fff;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 148px;
+            height: 5px;
+            background: #fff;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom:0;
+            display: block;
+            width: 148px;
+            height: 5px;
+            background: #fff;
+        }
+    }
+
+    &__sl-title {
+        font-size: 48px;
+        line-height: 70px;
+        color: #fff;
+        font-family: Sans-Bold;
+        margin: 0;
+        margin-top: 27px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+
+    &__go-catalog {
+        height: 51px;
+        line-height: 51px;
+        padding: 0 36px;
+        font-size: 18px;
+        background-color: #ef7f1a;
+        margin: 0 auto;
+        color: #fff;
+        font-family: Sans-Bold;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 20;
+        position: relative;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 62px;
+    padding-left: 0;
+    transform: translateX(-31px);
+
+    .slick-active {
+        background-color: #ef7f1a;
+    }
+
+    li {
+        list-style: none;
+        height: 11px;
+        width: 11px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        
+
+        button {
+            background-color: transparent;
+            padding: 0;
+            border:0;
+            font-size: 0;
+            
+        }
+    }
+}
+
+.slick-list {
+    width: 100%;
+}

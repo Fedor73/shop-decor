@@ -1,0 +1,182 @@
+//- ====================
+//- Project: Шапка сайта
+//- 00-00-2017: Author
+//- --------------------
+//- Шапка
+//- ====================
+mixin header()
+    +b.container
+        +b('header').header
+            +e('a')(href="").link
+                +e('img')(src='images/logo.png').logo-img
+                +e('img')(src='images/logo-text.jpg').logo-img-text
+                +e('p').text-logo Интернет-магазин декора
+
+            +e('nav')
+                +e('ul').list
+                    +e('li').nav-item
+                        +e('a')(href="").link-nav Новости 
+                    +e('li').nav-item
+                        +e('a')(href="").link-nav Акции
+                    +e('li').nav-item
+                        +e('a')(href="").link-nav Оплата и доставка
+                    +e('li').nav-item
+                        +e('a')(href="").link-nav Контакты
+            +e('a')(href="tel:+78002341900").phone
+                +e('img')(src='images/phone.png').phone-img
+                span 8 800 234 19 00
+
+    +e.wrap-bot-head
+        +b('nav').navigation-wrap
+            +b.container
+                +b('nav').navigation
+                    +e('div').item.--first
+                        +e('div').gamburger
+                            +e('span').line
+                            +e('span').line
+                            +e('span').line
+                        span Каталог товаров
+                    +e.item.--search
+                        +e.wrap-loop
+                            +e('img')(src="images/loop.png", alt="").loop 
+                        span Поиск по сайту
+                    +e.item.--basket 
+                        +e('img')(src="images/basket.png", alt="").basket-img
+                        span Корзина
+                        +e('span').count-basket 0
+                    +e.item.--matter  
+                        +e('span').circle ?
+                        span Задать вопрос
+
+                
++b.container
+    ul#accordion.accordion
+      li
+        .link Керамика
+        ul.submenu
+          li
+            a(href='#') Photoshop
+          li
+            a(href='#') HTML
+          li
+            a(href='#') CSS
+      li
+        .link дерево
+
+        ul.submenu
+          li
+            a(href='#') Javascript
+          li
+            a(href='#') jQuery
+          li
+            a(href='#') Ruby
+      li
+        .link пластик
+        ul.submenu
+          li
+            a(href='#') Tablet
+          li
+            a(href='#') Mobile
+          li
+            a(href='#') Desktop
+      li
+        .link стекло
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link метал
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link искусственные цветы
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link корзины
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+        
+      li
+        .link упаковка
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link Пакеты подарочные
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+            
+      li
+        .link Декор
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link Сувениры
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+        .info-menu-block РАЗДЕЛЕНИЕ ПО СТИЛЯМ
+
+      li
+        .link Стиль прованс
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo
+
+      li
+        .link Стиль винтаж
+        ul.submenu
+          li
+            a(href='#') Google
+          li
+            a(href='#') Bing
+          li
+            a(href='#') Yahoo

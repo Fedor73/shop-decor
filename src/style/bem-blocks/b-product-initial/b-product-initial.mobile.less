@@ -1,0 +1,106 @@
+.b-product-initial {
+    &__title {
+        color:#5aab23;
+        font-family: Sans-Bold;
+        font-size: 26px;
+        letter-spacing: 1.5px;
+        margin-bottom: 31px;
+    }
+
+    &__info-block {
+        p {
+            font-size: 18px;
+            line-height: 24px;
+            color: #515151;
+            margin: 0;
+        }
+    }
+
+    &__section-title {
+        color:#333333;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: Sans-Bold;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+
+        &--lat {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__info-block {
+        margin-bottom: 55px;
+    }
+
+
+    &__block-green {
+        border-top:1px solid #a9d18d;
+        border-bottom:1px solid #a9d18d;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+
+        .wrapper {
+            position: relative;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 18px;
+            flex: 1;
+            &:before {
+                content: '';
+                height: 49px;
+                width: 1px;
+                background-color: #a9d18d;
+                position: absolute;
+                right: 14px;
+                top: 15px;
+            
+            }
+
+            h4 {
+                font-size: 16px;
+                color:#5aab23;
+                margin-bottom: 6px;
+            }
+
+            p {
+                font-size: 16px;
+                color:#333333;
+                margin: 0;
+            }
+
+            &:last-child {
+                width: 208px;
+                flex: 0 0 auto;
+                &:before {
+                   display: none;
+                }
+            }
+        }
+    }
+
+    .wrap-color-bl {
+        display: flex;
+
+        span {
+            height: 22px;
+            width: 22px;
+            border:1px solid #e9e9e9;
+            display: block;
+            margin-right: 10px;
+
+            &.white {
+                background-color: #fff;
+            }
+
+            &.green {
+                background-color: #c3da59;
+            }
+
+            &.red-black {
+                background-color: #671411;
+            }
+        }
+    }
+}

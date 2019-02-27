@@ -1,0 +1,207 @@
+//- ====================
+//- Project: main
+//- 00-00-2017:
+//- --------------------
+//- Главная страница.
+//- ====================
+
+//- Используем стандартный шаблон Project
+extends ./template/base_layout
+
+block variables
+    - var file_name = 'main'
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Главная страница';
+
+//- Выводим content
+block content
+
+
+    +b('section').main-slider.js-sl-main
+        +e.item-sl
+            +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_rozovyj_lepestki_buton_krupnym_planom_119905_1920x1080.jpg", alt="").img.js-image-wrapper
+            +e.wrap-title
+                +e('h1').sl-title Оптовые продажи товаров декора
+                +e('a')(href="javascript:void(0);").go-catalog Перейти в каталог
+        +e.item-sl
+            +e('img')(src="https://images.wallpaperscraft.ru/image/dikaia_roza_rozovyj_kust_122926_1920x1080.jpg", alt="").img.js-image-wrapper
+        +e.item-sl
+            +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_podsolnukh_iskusstvennyj_119551_1920x1080.jpg", alt="").img.js-image-wrapper
+
+    .b-container
+        +b('section').sections
+            +e('ul').list
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                        +e('span').info  Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info  Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info  Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+                +e('li').item
+                    +e('a')(href="javascript:void(0);").link
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('span').info Керамика
+
+
+    .b-container
+        +b('section').card-my
+            +e('h3').title Наши товары
+            +e('ul').list
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+                
+
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+                
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+
+    .b-container
+        +b('section').mailing
+            +e('img')(src="images/post.png", alt="").img
+            +e.wrap-form
+                +e.info
+                    +e('p').title подписаться на рассылку
+                    +e('span').text Узнавайте свежую информацию о скидках и акциях первым.
+                +e('form')(action="").form
+                    input(type="text").input
+                    +e('button').button Подписаться 
+
+        .b-container
+            +b('section').news
+                +e('h3').title Новости
+                +e('ul').list
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+    
+    +b('section').friends-wrap
+        .b-container
+            +b.friends    
+                +e('ul').list
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper   
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper

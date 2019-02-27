@@ -1,0 +1,286 @@
+//- ====================
+//- Project: main
+//- 00-00-2017:
+//- --------------------
+//- Главная страница.
+//- ====================
+
+//- Используем стандартный шаблон Project
+extends ./template/base_layout
+
+block variables
+    - var file_name = 'main'
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Карточка товара';
+
+//- Выводим content
+block content
+
+    .b-container
+        +b('ul').bredcarmp
+            +e('li').item
+                +e('a')(href="").link  Главная
+            +e('li').item
+                +e('span') /
+                +e('a')(href="").link  каталог товаров
+            +e('li').item
+                +e('span') /
+                +e('a')(href="").link  керамика
+            +e('li').item
+                +e('span') /
+                +e('a')(href="").link  товар
+            
+    .b-container
+        +b.wrap-card-info
+            +b('section').card-product
+                +b('article').article
+                    +e('h2').title Каталог
+
+                    +e('ul').article-menu
+                        li
+                            a(href="") Керамика
+                            +e('ul').sub-arcticle-menu
+                                li
+                                    a(href="") Кашпо
+                                li
+                                    a(href="") Вазы
+                                li 
+                                    a(href="") Кувшины
+                                li 
+                                    a(href="") Лейки
+                        li
+                            a(href="") Дерево
+                        li
+                            a(href="") пластик
+                        li
+                            a(href="") стекло
+                        li 
+                            a(href="") металл
+                        li 
+                            a(href="") искусственные цветы
+                        li 
+                            a(href="") корзины
+                        li 
+                            a(href="") упаковка
+                        li 
+                            a(href="") пакеты подарочные
+                        li 
+                            a(href="") декор
+                        li 
+                            a(href="") сувениры
+
+                    +e('h3').title Стили
+                    +e('ul').article-menu
+                        li
+                            a(href="") Стиль прованс
+                        li 
+                            a(href="") Стиль винтаж
+            
+
+            +b('section').product-initial
+                +e('h2').title Кашпо NIEUWKOOP WHITE COUPLE
+
+
+                +b('section').card-cl
+                    +e.wrapper-info-sl-text
+                        +b.card-wrap-slider.js-sl-card
+                            +e.item-sl
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_rozovyj_lepestki_buton_krupnym_planom_119905_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-sl
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/dikaia_roza_rozovyj_kust_122926_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-sl
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_podsolnukh_iskusstvennyj_119551_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-sl
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_rozovyj_lepestki_buton_krupnym_planom_119905_1920x1080.jpg", alt="").img.js-image-wrapper
+                        +b.card-wrap-slider.js-sl-card-bot
+                            +e.item-slq
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_rozovyj_lepestki_buton_krupnym_planom_119905_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-slq
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/dikaia_roza_rozovyj_kust_122926_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-slq
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_podsolnukh_iskusstvennyj_119551_1920x1080.jpg", alt="").img.js-image-wrapper
+                            +e.item-slq
+                                +e('img')(src="https://images.wallpaperscraft.ru/image/tsvetok_rozovyj_lepestki_buton_krupnym_planom_119905_1920x1080.jpg", alt="").img.js-image-wrapper
+                    +e.wrapper-info-text
+                        h6 Страна:
+                        p  Италия
+                        h6 Бренд:
+                        p  Nieuwkoop Europe B.V.
+                        h6 Материал:
+                        p.dop  Керамика
+                        h6.dop  Цена:
+                        span 15 000 ₽
+
+                        +e('form').form
+                            +e.flex
+                                p Количество:
+                                +e('input')(type="number" maxlength="10").input
+                            +e('button')(type="submit").button В корзину
+
+
+                +e.block-green
+                    div.wrapper
+                        h4 Артикул:
+                        p S920100
+                    div.wrapper
+                        h4 Диаметр:
+                        p 13 см
+                    div.wrapper
+                        h4 Высота:
+                        p 11,5 см
+                    div.wrapper
+                        h4 Вес:
+                        p 0, 4 кг
+                    div.wrapper
+                        h4 Цвета в наличии:
+                        div.wrap-color-bl
+                            span.white
+                            span.red-black
+                            span.green
+
+                +e.info-block
+                    +e('h2').section-title описание
+                    p Стильное кашпо с глянцевой поверхностью может украсить любой интерьер. Оно представлено в трёх размерах и четырёх цветовых решениях - белый, чёрный, бордовый и зелёное яблоко. В этом кашпо можно выращивать орхидеи, фиалки, платикодон астра и экзакум.
+
+                +e('h2').section-title.--lat Похожие товары
+                +b('section').sections
+                    +e('ul').list
+                        +e('li').item.--min
+                            +e('a')(href="javascript:void(0);").link
+                                +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                                +e('span').info  Керамика
+                        +e('li').item.--min
+                            +e('a')(href="javascript:void(0);").link
+                                +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                                +e('span').info Керамика
+                        +e('li').item.--min
+                            +e('a')(href="javascript:void(0);").link
+                                +e('img')(src="http://дача66.рф/files/products/9d2cfcce-557f-420e-8465-92e50ed94124.800x600w.jpg", alt="").img.js-image-wrapper
+                                +e('span').info Керамика
+
+    .b-container
+        +b('section').card-my
+            +e('h3').title Наши товары
+            +e('ul').list
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+                
+
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+                
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+            
+                +e('li').item
+                    a(href="javascript:void(0);")
+                        +e('img')(src="https://static.regmarkets.ru/listpreview/images/d4/9c/d49cd3646c0df731f02ad525f36c3723.jpg", alt="").img.js-image-wrapper
+                        +e('p').text Плющ английский L115 см 
+                    +e.wrap-price
+                        +e.left-price
+                            +e('span').order-text Цена
+                            +e('span').price 71850 Р
+                        form(action="")
+                            +e('button')(href="javascript:void(0);" type="submit").link В корзину
+
+    .b-container
+        +b('section').mailing
+            +e('img')(src="", alt="").img
+            +e.wrap-form
+                +e.info
+                    +e('p').title подписаться на рассылку
+                    +e('span').text Узнавайте свежую информацию о скидках и акциях первым.
+                +e('form')(action="").form
+                    input(type="text").input
+                    +e('button')(type="submit").button Подписаться 
+
+
+
+        .b-container
+            +b('section').news
+                +e('h3').title Новости
+                +e('ul').list
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+                    +e('li').item
+                        a(href="javascript:void(0);")
+                            +e('p').text Режим работы в период Новогодних праздников
+                            +e('span').description 29 декабря 2019
+    
+    +b('section').friends-wrap
+        .b-container
+            +b.friends    
+                +e('ul').list
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper              
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
+                    +e('li').item
+                        +e('a')(href="javascript:void(0);").link
+                            +e('img')(src="https://files.adme.ru/files/news/part_101/1014110/546210-4-1-650-a542d8629a-1482143422.jpg", alt="").img.js-image-wrapper
